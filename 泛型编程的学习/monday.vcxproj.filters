@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="为什么会有函数模板.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="demo03函数模板遇上函数重载.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -33,5 +30,37 @@
     <ClCompile Include="demo06类模板的基本的语法.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="demo01为什么会有函数模板.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demo07复数类_所有的实现写在类的内部.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demo08复数类_所有的实现写在类的外部.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dm09_complex_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demo10类模板中的static关键字.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyVector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyVector_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dm09_complex.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dm09_complex.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVector.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

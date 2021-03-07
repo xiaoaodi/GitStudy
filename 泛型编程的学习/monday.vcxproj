@@ -143,8 +143,19 @@
     <ClCompile Include="demo04函数模板和普通函数的研究.cpp" />
     <ClCompile Include="demo05模板函数本质的刨析.cpp" />
     <ClCompile Include="demo06类模板的基本的语法.cpp" />
-    <ClCompile Include="为什么会有函数模板.cpp" />
+    <ClCompile Include="demo01为什么会有函数模板.cpp" />
     <ClCompile Include="demo02函数模板做函数参数强化.cpp" />
+    <ClCompile Include="demo07复数类_所有的实现写在类的内部.cpp" />
+    <ClCompile Include="demo08复数类_所有的实现写在类的外部.cpp" />
+    <ClCompile Include="demo10类模板中的static关键字.cpp" />
+    <ClCompile Include="dm09_complex_test.cpp" />
+    <ClCompile Include="MyVector.cpp" />
+    <ClCompile Include="MyVector_test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dm09_complex.h" />
+    <ClInclude Include="dm09_complex.hpp" />
+    <ClInclude Include="MyVector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

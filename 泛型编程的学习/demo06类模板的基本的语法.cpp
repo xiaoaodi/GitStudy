@@ -93,7 +93,7 @@ void UseA(A<int>& a)
 	a.printA();
 }
 
-void main()
+void main63()
 {
 	//模板类(本身就是类型化的)====具体的类=====>定义具体的变量
 
