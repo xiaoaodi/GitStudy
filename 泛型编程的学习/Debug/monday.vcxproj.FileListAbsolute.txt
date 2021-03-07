@@ -1,0 +1,2 @@
+D:\c++\daima\monday\Debug\monday.exe
+D:\c++\daima\monday\Debug\monday.pdb
