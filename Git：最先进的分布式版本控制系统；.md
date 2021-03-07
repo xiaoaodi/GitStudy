@@ -136,7 +136,7 @@ url:设置修改
 
 实现：1、打开提示
 
-2、生成私钥
+2、生成私钥    # 进入 C:\Users\Administrator\.ssh 目录``# 生成公钥``ssh-keygen
 
 3、上传公钥文件的内容（id_rsa.pub）
 
@@ -185,3 +185,37 @@ url:设置修改
 ![image-20210306085308659](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210306085308659.png)
 
 在文件中使用#代表注释
+
+## 忽略文件
+
+有些时候我们不想把某些文件纳入版本控制中，比如数据库文件，临时文件，设计文件等
+
+在主目录下建立".gitignore"文件，此文件有如下规则：
+
+1. 忽略文件中的空行或以井号（#）开始的行将会被忽略。
+2. 可以使用Linux通配符。例如：星号（*）代表任意多个字符，问号（？）代表一个字符，方括号（[abc]）代表可选字符范围，大括号（{string1,string2,...}）代表可选的字符串等。
+3. 如果名称的最前面有一个感叹号（!），表示例外规则，将不被忽略。
+4. 如果名称的最前面是一个路径分隔符（/），表示要忽略的文件在此目录下，而子目录中的文件不忽略。
+5. 如果名称的最后面是一个路径分隔符（/），表示要忽略的是此目录下该名称的子目录，而非文件（默认文件或目录都忽略）。
+
+
+
+```
+#为注释*.txt        #忽略所有 .txt结尾的文件,这样的话上传就不会被选中！!lib.txt     #但lib.txt除外/temp        #仅忽略项目根目录下的TODO文件,不包括其它目录tempbuild/       #忽略build/目录下的所有文件doc/*.txt    #会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+```
+
+
+
+
+
+**分支操作**
+
+```
+# 列出所有本地分支git branch
+# 列出所有远程分支git branch -r
+# 新建一个分支，但依然停留在当前分支git branch [branch-name]
+# 新建一个分支，并切换到该分支git checkout -b [branch]
+# 合并指定分支到当前分支$ git merge [branch]
+# 删除分支$ git branch -d [branch-name]
+# 删除远程分支$ git push origin --delete [branch-name]$ git branch -dr [remote/branch]
+```
