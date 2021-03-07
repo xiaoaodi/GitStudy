@@ -16,13 +16,13 @@ GitHub是存放代码的网页
 
 git config --l
 
-git config --globa user.name ""
+git config --global user.name ""
 
 git config --global user.email ""
 
 
 
-mkdir 文件名
+mkdir 文件名  
 
 cd 文件名
 
@@ -48,7 +48,7 @@ git的常用指令操作
 
 语法3：git add . 添加当前文件的所有的内容
 
-添加当前的目录到缓冲区
+添加当前的文件或者目录到缓冲区
 
 
 
@@ -76,7 +76,7 @@ git commit -m "描述文件的字段"
 
 已得到最新的commit id
 
-指令：git reflog 
+指令：git reflog    回到未来
 
 小结：1.要想回到过去，必须先得到commit id ,再通过 git reset --hard 进行回退
 
@@ -100,7 +100,7 @@ b.使用clone指令克隆线上的仓库到本地
 
 
 
-c.在仓库上做对应的操作（提交暂存区、提交本地仓库、提交线上仓库、拉去线上仓库）
+c.在仓库上做对应的操作（提交暂存区、提交本地仓库、提交线上仓库、拉取线上仓库）
 
 提交到线上仓库的指令 ：git push
 
