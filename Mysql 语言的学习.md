@@ -24,6 +24,10 @@ mysql -u root -p
 
 \u = use  数据库名  使用数据库
 
+
+
+
+
 show databases 显示所有的数据库
 
 3、通过dos命令重新配置mysql   通过mysql安装目录中/bin/config文件
@@ -42,11 +46,11 @@ show charset;查看mysql支持的字符集
 
 5.查看表的字符集
 
-语法：show table status from 库名 like  表名;
+语法：show table status from 库名 like  表名;ale
 
 6.查看表中所有列的字符集
 
-语法：show full columns from 表名;
+语法：show full columns from com like xiao;
 
 ### 二、数据库和表的基本操作
 
@@ -88,7 +92,7 @@ drop database mydb1;
 
 5、选择数据库
 
-use mydb2;没有退出的语法，直接切换 
+use mydb2;没有退出的语法，直接切换 t
 
 （1）select database()：查看数据库
 （2）select version()：查看数据库版本
@@ -312,7 +316,7 @@ create table  表名 {
 
 ![image-20210310120324620](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310120324620.png)
 
-create table t1{
+create table user{
 
 id int,
 
@@ -326,15 +330,19 @@ index (id)
 
 2、创建唯一的索引 
 
+
+
 create table t1{
 
 id int,
 
-name char,
+name char(20),
 
-uique index unique_id(id ASC)升序
+unique index unique_id(id ASC)
 
 }
+
+
 
 3、创建全文索引
 
@@ -352,7 +360,33 @@ fulltext index fulltext_name(name)
 
 4、创建多列索引
 
+创建唯一的索引 
 
+create table user1(
+
+id int ,
+
+name varchar (20),
+
+index multi(id,name(20))
+
+);
+
+desc table user1;查看表的信息；
+
+create table user1(
+
+id int ,
+
+name varchar (20),
+
+space geometry not null,
+
+spatial index sp(space)
+
+)engine=myisam;
+
+desc table user1;查看表的信息；
 
 ![image-20210310121041579](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310121041579.png)
 
@@ -360,9 +394,25 @@ fulltext index fulltext_name(name)
 
 ![image-20210310121256608](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310121256608.png)
 
+create table book(
+
+id int ,
+
+name varchar (20),
+
+space geometry not null
+
+);
+
+创建普通索引：
+
+create index index_id on book(id);
+
 ![image-20210310121431279](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310121431279.png)
 
 ![image-20210310121507424](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310121507424.png)
+
+
 
 ![image-20210310121541803](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310121541803.png)
 
@@ -376,15 +426,45 @@ fulltext index fulltext_name(name)
 
 **1、Insert** 
 
+create table user1(
+
+id int,
+
+name varchar(20),
+
+age int
+
+);
+
+insert into user1 (id,name,age) values(1,’肖飞’,22);
+
+insert into user1 values (2,’李四‘,20),(3,’王五‘,30); 
+
+//全部信息插入的情况下
+
 ![image-20210310122437704](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310122437704.png)
 
 数据的值不应该超过规定大小，类型也应该一致
 
 **2、update**
 
-![image-20210310122741530](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310122741530.png)
+update user1 set age =100;
+
+update user1 set age =200 where name = '肖飞';
+
+update user1 set age =10 ,id =20where name = '王五';
+
+update user1 set age=age+10 where name ='肖飞'；
+
+![](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310122741530.png)
 
 **3、delete(truncate 整表摧毁重新创建，auto_increment)**
+
+delete from user1;
+
+delete from user1 where id=2;
+
+truncate user1;
 
 ![image-20210310123007667](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310123007667.png)
 
@@ -394,7 +474,21 @@ distinct 去除重复列
 
 ![image-20210310123135959](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310123135959.png)
 
-![](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310123238614.png)
+
+
+select * from exam;
+
+select name,english from exam;
+
+select distinct english from exam;
+
+select name as 名字,math+english+chinese  as 总分 from exam;
+
+select name 名字,math+english+chinese  总分 from exam;
+
+select name ,english+10 from exam;
+
+
 
 ![image-20210310123454880](C:\Users\hasee\AppData\Roaming\Typora\typora-user-images\image-20210310123454880.png)
 
